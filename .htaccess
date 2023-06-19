@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteBase /PHP_HW10/
+
+
+#RewriteCond %^PHP_HW10/([a-z]+)?/?([a-z]+)?/?([a-z]+)?/?([a-z]+)?/?([0-9]+)?
+#RewriteRule  ^PHP_HW10/([a-z]+)?/?([a-z]+)?/?([a-z]+)?/?([a-z]+)?/?([0-9]+)?index.php
+
+RewriteCond %{REQUEST_URI} /
+RewriteRule  {REQUEST_URI} /index.php
+
+
+
+ErrorDocument 404 /PHP_HW10/views/404.php
